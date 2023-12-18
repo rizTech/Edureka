@@ -1,0 +1,192 @@
+Session 1 - 1st July 2023
+sonal mittal - Instructor
+
+CKA -> kubernete certification
+
+Session 2 - 2nd July 2023
+
+https://github.com/Sonal0409/Linux-Fundamentals.
+
+Session 1 (22-07-2023)
+SDLC and its phases
+
+waterfall model
+Agile model (Iterative model)
+	- 2 team member
+		Product owner
+			user storties> functinality to be developed
+		Scrum master
+		
+Version Control:
+	multiple people can colaborate together
+	maintain history of changes done by different people on the team
+	
+artifactories -> nexus, jfrog
+
+elastic ip = static ip (paid service)
+
+
+Linus command:
+ clear -> clear the screen
+ uname -> what operating system
+ cat -> content of file
+ pwd -> print working directory
+ cd -> change directory
+ ls -> list
+ sudo (super user do) 
+ sudo su  - 
+ cat /etc/passwd
+ adduser
+ su - : switch user
+ exit comeback to root user
+ userdel -> deletes user
+ :q! -> last command
+ mkdir -> make directory
+ touch -> create empty file
+ echo (is a print command in linux)
+ echo "hello" > file1 : add content in the file
+ >> indicates append
+ ctrl + d -> saves content to file
+ vim file3 : into file3 (if file does not exists it creates the file)
+ i : inserts data into file
+ esc : to come out of existing model
+ :wq -> save the file and come out of the file
+ :q -> quit the file
+ :q! -> forcibaly quit
+ ls -al : list of file with details
+ cp -> copy content of one file to new file
+ sed -> modification command
+ 
+ rm -rf <dir name>
+	- forcefully removes dir (which is not empty)
+ 
+ 
+ Editors in linus:
+	vi
+	vim
+	nano
+ 
+ 
+ user command -> shell -> kernel(responsible to execute command with the help of hardware components of OS)
+ 
+ 
+ every command is a binary file executed by shell
+ 
+ user and user management
+ root user = admin 
+ 
+ u -> file owner
+ g -> all users of the same group
+ o -> other users of linux OS
+ a -> all the users of the OS(including the owner)
+ 
+ Read => 4
+ Write => 2
+ Execute => 1
+ - => 0
+ 
+ U -> file owner => 6
+ G -> group users => 4
+ A -> others (everybody else) => 4
+ 
+ Permissions:
+ r = Read
+ w = Write
+ x = Execute
+ - = no permission
+ 
+ There are 3 sets of permission on any file or directory
+	- we have 1 set of read/write/execute permission for owner of the file
+	- we have 1 set of read/write/execute permission for group users
+	- we have 1 set of read/write/execute permission for other users of linux os
+
+-rw-rw-r--
+- : its a file
+d : its a directory
+rw- : read/write/noExecute for owner of the file
+rw- : read/write/noExecute for group users
+r-- : read/noWrite/noExecute
+
+drwxrwxr-x 2 devopsuser devopsuser   32 Aug  5 04:18 mydemo
+-rw-rw-r-- 1 devopsuser devopsuser    0 Aug  5 04:17 filey
+
+1 : single file
+2 : no. of files in the directory
+devopsuser : owner user
+devopsuser : group of the user
+32: size of the file
+Aug  5 04:18: date and time when created
+mydemo: name of file/directory
+
+To edit the permission of file
+	- using numbers
+	- using characters
+
+command to change permission of file/directory:
+	chmod <permission> <filename>
+
+E.g:
+-rw-rw-r-- 1 devopsuser devopsuser   91 Aug  5 03:50 file6
+
+sed -i s/<old text>/<newtext>/g <filename>
+
+sed: modify
+i: save
+s: replace
+<oldtext>: existing text from given file
+<newtext>: new text that will replace old text
+g: globally
+<filename>: file that needs to be modified
+
+sed i '/<text>/d' <filename>
+
+d: delete (deletes entire line that has given text
+
+grep "<text>" <filename>
+ grep: searches the specified text in the given file
+ 
+mv <filename> <directoryname>
+	- moves the file to given directory
+	
+	
+Process commands in Linus
+	- top: this command will give all running process in your os
+	- ps : gives snapshot list of all current process
+	- ps aux: shows process by all users. displays the process user/owner also shows processes not attached to an app
+	
+
+ps -l -u <user>
+	- lists processes by given user
+	
+pkill -9 29806
+	- kill process
+	- -9 is signal to kill
+	- 29806 is PID
+
+pkill -u <user>
+	- kills all the processes of the user
+	
+
+How to check status for apache server
+	- sudo systemctl status apache2.service
+	
+How to start apache server 
+	- sudo systemctl start apache2.service
+	
+How to stop apache server:
+	sudo /etc/init.d/apache2 stop
+	OR
+	systemctl stop apache2.service
+
+How to switch user
+	- su <username>
+	
+To get the information of all the paths associated with the apache2 web server, you can run the following command:
+	- whereis apache2
+	
+How to uninstall apache2
+	-sudo apt remove apache2
+	
+List of users
+	- cat /etc/passwd
+

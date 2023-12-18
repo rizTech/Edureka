@@ -1,0 +1,388 @@
+Need Of Programming:
+	To develop applications and games
+	Automate time consuming tasks
+	Provide proper environment for programming
+	Advances ability to develop real time algorithms
+	Keep track of historic data and analyses it
+	Improve costomized your existing system
+	Provide better experience to end users
+	Help in stream lining the process
+
+
+Why Python?
+	Python is simple and easy to learn, read and write
+	Free and Open source:
+		Python is an example of a FLOSS(Free/Libre and Open Source Software) which means one can freely distribute copy of this software, read it's source code, modify it etc.
+	High Level Language: 
+		One does not need to bother about the low-level details like memory allocation, etc. while writing python script.
+	Portable:
+		Supported by many platforms like Linux. Windows, FreeBSD, Macintosh, Solaris, BeOS, OS/390, Playstation, Windows CE etc.
+	Supports sifferent programming paradigm:
+		Python supports procedure-oriented programming as well as object-oriented programming.
+	Extensible:
+		Python code can invoke C and C++ libraries
+		Can be called from C and C++ programs
+		Can integrate with Java and .NET components
+
+summary:
+	Improved programmer's productivity
+	Extensive support libraries
+	Integration features
+	Productivity
+	Robust
+	Program portability
+	Interactive, Interpreted and Dynamic
+	Object Oriented Language
+
+Who is using Python?
+	YouTube
+	Google
+	Dropbox
+	RaspberryPi
+	BitTorrent
+	NASA
+	NSA
+	Netflix
+	
+Python Interpreter:
+	Python interpreter is a program that reads and executes code
+	This includes source code, pre-compiled codes and scripts
+	Example: help("for)
+	
+Literal Constants: Any number or character, or set of characters
+
+Identifiers - Naming Conventions
+	Class names start with an uppercase letter. All other identifiers starts with lowercase letters.
+	Starting an identifier with a single leading underscore indicates that the identifier is private
+	Starting an identifier with two leading underscores indicates a strongly private identifier
+	If the identifier ends with two trailing underscores, the identifier is a language-defined special name.
+	
+Variables:
+	Variables are nothing but reserved memory locations to store values. This means that when you create a variable, you reserve some space in memory.
+	E.g: A = 16
+		 B = "Edureka"
+		 print(A, B)
+		 
+Standard Data Types:
+	Values cannot be changed
+		Immutable Data Types
+			Numbers
+				- Python supports three diff numerical values.
+					int(Signed integers) e.g A=10
+					Complex Numbers e.g C = 10 + 6j
+					Float(Real Numbers) e.g B = 10.65
+				- In python you can represent Numbers in multiple ways:
+					Binary
+					Octal
+					Hexadecimal
+			Strings
+				- The continuous set of characters represented within quotation is called a String. Python allows for either pair of single or double quotes. 
+				  Pythons does not support a charater type, these are treated as String of length one
+			Tuples
+				- Tuples consists of number of values seperated by comma. It is enclosed within parenthesis
+				- A tuple can have objects of diff data types, unlike Arrays in 'C'
+					e.g: A = (1, 2, 3.15, 'edureka!')
+	Values can be changed
+		Mutable Data Types
+			Lists
+				- List is an ordered set of elements enclosed within square brackets. The main diff between Lists and Tuples are:
+					Lists are enclosed in brackets[] and Tuples are enclosed within parenthesis().
+					Lists are mutable and tuples are immutable
+					Tuples are faster than Lists
+			Dictionaries
+				- Dictionaries contains key value pairs. Each key is seperated from its value by a colon (:), the items are seperated by comma, and the whole 
+				  thing is enclosed within curly braces
+				- e.g: A = {'Age': 34, 'Name': 'John'}
+			Sets
+				- A Set is an unordered collection of items. Every element is unique. A set is created by placing all the items(elements) inside curly braces, seperated by comma.
+				- e.g: A = {1, 2, 3, 3} print(A) -> output: {1, 2, 3}
+				- you can also create Set by calling an in built function 'set'.
+				
+Operators:
+	Operators are the constructs which can manipulate the values of the operands. Consider the expression 2 + 3 = 5, here 2 and 3 are operands and + is operator.
+Types of Operators:
+	Arithmetic
+		- Additon -> a + b
+		- Subtraction -> a - b
+		- Multiplication -> a * b
+		- Division -> a / b
+		- Modulus -> a % b
+		- Exponent -> a ** b
+		- Floor Division -> a // b
+	Assignment
+		- Assigns value from right to left -> a = b
+		- a = a + b -> a += b
+		- a = a - b -> a -= b
+		- a = a * b -> a *= b 
+		- a = a / b -> a /= b
+		- a = a ** b -> a **= b
+		- a = a // b -> a //= b		
+	Comparisonss
+		- Equal To -> a == b
+		- Not Equal To -> a != b
+		- Greater Than -> a > b
+		- Less Than -> a < b
+		- Greater Than Equal To -> a >= b
+		- Less Than Equal To -> a <= b
+	Logical	
+		- a and b -> Returns a if a is false, b otherwise
+		- a or b -> Returns b if b is false, a otherwise
+		- Not a -> Returns true if a is true, false otherwise
+	Bitwise
+		- Binary AND -> a & b
+		- Binary OR -> a | b
+		- Binary XOR -> a^b
+		- Binary NOT -> a ~ b
+		- Binary Left Shift -> a <<
+		- Binary Right Shift -> a >> b
+	Identity
+		- is -> Evaluates to TRUE if the variables on either side of the operator point to the same object and FALSE otherwise
+		- is not -> Evaluates FALSE if the variables on either side of the operator points to the same object and TRUE otherwise
+	Membership
+		- in -> Evaluates TRUE if it finds a variable in the specified sequence and FALSE otherwise
+		- not in -> Evaluates TRUE if it does not find a variable in the specified sequence and FALSE otherwise
+	
+Conditional Statements:
+	Conditional statements are used to execute a statement or a group of statements when some condition is true
+	Types:
+		If
+		Elif
+		Else
+
+Loops:
+	A loop statement allows us to execute a statement or a group of statement multiple times.
+	Types:
+		While: While loops are known as infinite or conditional loops. They will keep iterating until certain conditions are met. There is not guarantee ahead of time regarding
+				how many time the loop will iterate.
+			Syntax: while expression:
+						Statements
+			Example: count = 0
+					 while(count < 5):
+						print(count)
+						count = count + 1
+					 print("Good Bye")
+		For: "For" loop is a python loop which repeats a group of statements a specified number of time.The for loop provides a syntax where the following information is provided
+				- Boolean Condition
+				- The initial value of the counting variable
+				- Incrementation of the counting variable
+			Syntax: for <variable> in <range>:
+						stmt1
+						stmt2
+						...
+						stmtn
+			Example: fruits = ['Banana', 'Apples', 'Grapes']
+					 for index in range(len(fruits)):
+						print(fruits[index])
+	Difference between For and While loop is that, in while loop we don't know the amount of iterations, whereas in For loop we are aware of how many times the block of code will be executed
+	
+		Nested: Nested loops basically means a loop inside a loop. I can be a For loop inside a While loop and vice-versa. I can also be a while loop inside a while loop or For loop inside a for loop
+				e.g: 
+				count = 1
+				for i in range(10):
+					print(str(i) * i)
+					
+					for j in range(0, i):
+						count += 1
+						
+		Loop Control Statements:
+			break statement: Terminates the loop statement and transfers execution to the statement immediately following the loop.
+			E.g: for i in range(10, 50):
+					print(i)
+					if(i == 30):
+						break
+			continue statement: Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating
+			E.g: for j in range(1, 11):
+					print(j)
+					if(j == 5):
+						continue
+			pass statement: The pass statement in python is used when a statement is required syntactically but do not want any command or code to execute
+			E.g: for k in range(1, 3):
+					pass					
+				 print("Loop ends here")
+				 
+Command Line Parameters:
+	- It is possible to pass arguements to python programs when they are executed
+	- The bracket which follow main are used for this purpose
+	- .argv refers to the number of arguements passed and argv[] is a pointer array which points to each arguement which is passed to main
+	- The python sys module provides access to any command-line arguements via sys.argv. This serves two purposes:
+		- sys.argv is the list of command-line arguements
+		- len(sys.argv) is the number of commandline arguements.
+		
+Sequences And File Operations:
+Input: 
+	getting input from users
+		- str = input("Enter Name: ").
+			imp** : if input is str then it shld be enclosed in quotes.
+	
+Open Function - Access Mode:
+	- You can open Files using Python's build-in open() function.
+		syntax: file_object = open(file_name, [access_mode]
+		- file_name: The file_name arguement is a string value that contains the name of the file that you want to access.
+		- access_mode: The access_mode determines the mode in which the file has to be opened, i.e read, write, append
+	Modes		Description
+	r			This is the default mode. Opens a file for reading only
+	rb			Opens a file for reading only in binary format
+	r+			Opens a file for both reading and writing
+	rb+			Opens a file for both reading and writing in binary format
+	w			Opens file for writing only. Overwrites the file if the file exists. If the file does not exists, creates a new file for writing.
+	wb			Opens a file for writing only in binary format. Overwrites the file if the file exists. If the file does not exists, creates a new file for writing
+	
+	
+	file.mode
+	file.name
+	file.seek - The seek(offset[, from]) method changes the current file position
+	file.tell - The tell() method tells you the current position within the file; in other words, the next read or write will occur at that many bytes from the beginning of the file
+	
+What are Sequences?
+	Sequences are containers with items that are accessible by indexing or slicing. The built-in len() funtion takes any container as an arguement and returns the number of items in the container.
+
+	Sequence Operation:
+	list = ["Marketing", "Content Designing", "Sales"]
+		- Concatenation -> join the sequences to create a new sequence
+			print(list + ["Python", "Hadoop"])
+		- Repetition
+			print(list * 2)
+		- Membership Testing
+			print("Marketing" in list)
+		- Slicing
+			print(list[0:2])
+		- Indexing
+			print(list[2])
+			print((list + ["Python", "Haddop"])[3])
+			
+Types of Sequences:
+	Lists:
+		List is the most versatile datatype in python, which can written as a comma seperated values(items) between square brackets.
+		E.g.: list = ["Marketing", "Sales", 8, 11]
+		Operations: 
+			- Slicing
+			- Updating list
+			- Delete List elements
+			- List length
+			- Concatenation
+			- Repetition
+		When to use list?
+			- If you have collection of data that does not need random access
+			- When you have to deal with valuse which can be changed
+		List - Indexing and Slicing:
+			list = ["Hadoop", "Python", "Android"]
+			print(list[1]) --> list[1] returns the value at index 1. where 1 is an integer
+			print(list[0:2] --> Returns value from index 0 to index 2(returns value at index 0 and index 1)
+			print(list[-1]) --> The last element of any non-empty list is  always list[-1]
+		List - Updating and Deleting Elements
+			list = ["Hadoop", "Python", "Android"]
+			list[1] = "Java" --> Updating element of a list
+			print(list)
+			del(list[2]) --> Deleting element of list
+			print(list)
+		List - Remove and Pop Functions
+			list = [1, 2, 3, 4, 5, 'a', 'b', 'c']
+			print(list.pop(3)) --> Returns the element at given index
+			list.remove('a') --> Removes given element from list
+			print(list)
+		List - type()
+			list3 = [1, 2, 5, "Python", "Hadoop"]
+			print(type(list3)) --> Returns the type of datatype
+			
+			print([x**2 for x in [1, 2, 3, 4, 5]]) --> Loop can be used in print statement for showing squares of elements of list
+		List - Built-In Functions
+			list = [1, 2, 3]
+			list.append("Machine Learning") --> Adds an item to the end of the list
+			list.extend(['g', 'h']) --> Inserts many items at the end of the list
+			list.insert(1, 'Scripting') --> Inserts an item at the given position
+			list.remove(3) --> Removes an item from the list
+			print(sorted(list)) --> Returns sorted list
+			print(list[::-1] --> reversed the list
+		A Tuple inside a List
+			list = [(1,2,3), ("Python", "Java")] --> Tuples are given as elements in list
+			print(len(list)) --> 
+			print(list[1][0:1]) --> slicing
+			
+	Tuples:
+		A Tuple is a sequence of immutable python objects. Tuples are sequences, just like lists
+		E.g.: tuple = ("Marketing", "Sales")
+		Tuple Operations:
+			tup1 = ("Hadoop", "Python", "Java")
+			Slicing:
+				- print(tup1[0][0:2])
+			Updating Tuple:
+			Delete Tuple:
+				-del(tup1)
+			Tuple Length: 
+				- print(len(tup1)) --> Gives the total length of the tuple
+			Concatenation:
+			Repetition:
+				- print(tup1 * 2)
+			Membership Testing: 
+				print("Java" in tup1)
+		When to use Tuple?
+			- When you need to complete the task in short time(Tuple has less execution time)
+			- When you have to deal with values which cannot be changed
+		Bult-In Tuple functions:
+			tup1 = ("Hadoop", "Python", "Java")
+			print(len(tup1)) --> Gives the total length of the tuple
+			print(max(tup1)) --> Return item from the tuple with max value
+			print(min(tup1)) --> Return item from the tuple with min value
+		Sorting and Reversing:
+			tup = (1, 3, 5, 2)
+			print(sorted(tup)) --> Sorts the given tuple
+			print(tup[::-1]) --> Reverse the tuple
+		
+		
+	Strings:
+		String formatting operators:
+		Operators		Conversion
+		%c				Character
+		%i				Signed decimal integer
+		%u				unsigned decimal integer
+		%o				Octal integer
+		%x				hexadecimal integer lowercaseletters
+		%e				exponential notation with lowercase'e'
+		%f				floating point real number
+		%g				the shorter of %f and %e
+		Built-In string methods:
+			str = "edureka"
+			print(str.capitalize())
+			print(str.count("ka", 0, len(str)))
+			s = str.encode('utf-8', 'strict')
+			print(s)
+			print(str.upper())
+			print(str.replace('e', '---E---', 1)) --> Replaces all occurrences of old in string with new or at most max occerences if max given
+			print(str.index('k'))
+			
+			str1 = "Happy Learning"
+			print(str1[::-1]) --> Reverses the string
+			print(str1[2:7] --> Slicing of string
+			print(str1.find('L')) --> Returns index on which the given letter is present in string
+			str2 = "Welcom to Edureka"
+			print(str1+str2) --> Concatenation of string
+			print(str1*2)  --> prints string 2 times
+	Set:
+		Set is an unordered collection of unique items. Set is defined by values seperated by comma inside braces {}
+		Set can also be created by calling the built-in set funtion
+		e.g: x = set('Welcom to Edureka')
+			 print(x)
+		When to use sets? :
+			If we want to collect unique strings or ints from a sequence
+		Set Operation - Union
+			A = {1,2,3,4}
+			B = {3,4,5,6}
+			print(A | B) --> output: {1,2,3,4,5,6} --> no duplication
+			Union of A and B is a Set of all elements from both sets. Union is performed using | operator.
+		Set Operation - Difference
+			print(A - B) or print(A - (A&B))
+		Subset: 
+			B contains A then A is subset of B
+	Dictionaries
+		Dictionary is an unordered collection of key-value pairs. It is generally used when we have huge amount of data.
+		e.g: dict = {1: "Python"}
+		Operations:
+			Length
+			del d[K]
+			Membership Testing
+			dict1 = {1: "Python", 2: "Android"} --> Creating a dictionary
+			print(dict)
+			print(dict[1]) --> Accessing values in dictionaries
+			
+	
+	

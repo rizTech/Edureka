@@ -1,0 +1,139 @@
+OBJECTIVES:
+
+- Define the Function and Call the Function
+	What are functions?
+		A Function is a block of organized, reusable code that is used to perform a single and related action
+	Define and Call Function:
+		def add(a,b):
+				sum = a + b
+				return (sum)
+		print(add(2,3))
+		print(add(4,3))
+- Understand why to use return statement
+- Understand and execute Object Oriented Concept
+- Learn Standard Libraries
+- Use Modules
+- Understand Exception Handling
+- Create User Defined Exceptions
+
+Built-In Functions:
+	sorted(): Returns a new sorted list from the items in iterable
+	all(): Returns true if all elements of the supplied iterable in true
+	any(): is the converse of all() funtion.
+	bool(): converts the value to a boolean, using the standard python truth testing procedure
+	chr(): Returns the string representing a character whose Unicode code point is the integer
+	open(): Opens file and returns a corresponding file object.
+	abs(): Returns the absolute value of an integer, floating point, or a complex number.
+	enumerate(): Returns an enumerate objectwith items and their index values
+	int(): Returns an integer object constructed from a number or string x
+	len(): Returns length on an object
+	globals(): Returns a dictionary representing the current global symbol table
+	bin(): Converts an integer number to a binary string prefixed with "0b"
+	eval(): The arguments are a string and optional globals and locals. If provided, globals must be a dictionay. If provided, locals can be any mapping object.
+	sum(): sum(iterable) sums the numeric values in an iterable such as list, tuple or a set.
+	reversed(): reversed(seq) is a reverse iterator on an object of the type that you can loop through and process. The list and tuple types are supported with this function.
+	int(): Returns an integer object constructed from a number or string x.
+
+Lambda Function:
+	While normal functions are defined using def keyword, in Python anonymous functions are defined using the lambda keyword.
+	e.g: ans = (lambda z:z*4)
+		 print(ans(7))
+
+	Map function using lambda:
+		items = [1, 2, 3, 4, 5]
+		squared = list(map(lambda x: x ** 2, items))
+		print(squared)
+	
+	Filter function using lambda:
+		number_list = range(-5, 5)
+		less_than_zero = list(filter(lambda x: x < 0, number_list))
+		print(less_than_zero)
+		
+	Reduce function using lambda:	
+		product = reduce((lambda x, y: x * y), [1, 2, 3, 4])
+		print(product)
+		
+Scope of Variables:
+	
+	
+	
+key arguement:
+	def print_users(user, *users):
+		print('First user arguement', user)
+		for user in users:
+			print("User received from variable length arguement", user
+
+	print_users('edureka', 'admin', 'ceo', 'cto', 'manager', 'worker')
+	
+
+Procedure Oriented v/s Object Oriented Programming
+
+	Procedure Oriented Programming							Object Oriented Programming
+	1. In POP, program is divided into small parts 			1. In OOP, program in divided into parts
+	   called functions											called object
+	2. POP follows Top Down approach						2. OOP follows Bottom Up approach
+	3. In POP, data can freely move from funtion to			3. In OOP, objects can move and communicate
+		funtion in the system									with each other through member function
+	4. Example of POP: C, VB, FORTRAN and Pascal			4. Examples of OOP: C++, Java and Python
+	
+	
+Class and Objects
+	- Class is blueprint used to create objects having same property or attributes as its class
+	- An object is an instance of a class which contains variables and methods.
+	
+Class Attributes (Private, Public, Protected)
+	- Example:
+	class Edureka():
+
+		def __init__(self):
+			self.__pri = ("I am Private")
+			self._pro = ("I am Protected")
+			self.pub = ("I am Public")
+
+	ob = Edureka
+	print(ob.pub)
+	print(ob._pro)
+	print(ob.__pri)
+	
+
+Key concepts - Object Oriented Programming:
+	Abstraction:
+		The abstraction is simplifying complex reality by modeling classes appropriate to the problem.
+		Class abstraction means to separate class implemetation from the use of the class.
+	Encapsulation:
+		Combining the code into public interface, and a private implemetation of that interface.
+		Mechanism for restricting the access of an objects componenets, this means that the internal representation of an object cannot be seen from outside of the objects definition.
+	Inheritance:
+		Inheritance is the powerfull feature of Object Oriented Programming. It refers to deriving a class from the base class with little or no modification in it.
+		Types of inheritance:
+			Single Inheritance
+			Multiple Inheritance
+			Multilevel Inheritance
+	Overriding
+	Polymorphism
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

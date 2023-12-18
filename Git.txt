@@ -1,0 +1,229 @@
+create git repository
+	git init
+local repository 
+	.git (folder)
+check status of working repository
+	git status
+stage file
+	git add (creates snapshot of changes of the file)
+commit command
+	git commit -m "message"
+	
+Git Configurations:
+	git config --global user.name rmkhan117
+	git config --global user.email rmkhan117@gmail.com
+	
+	check config:
+		git config --list
+	config location
+		cat ~/.gitconfig
+		
+		opens the gitconfig file
+			git config --global --edit
+		
+		remove/delete config
+			git config --global --unset user.name 
+			
+			git config --local user.name <username>
+			git config --local user.email <email>
+		
+can we set config for other users?
+
+
+check the changes
+git diff --staged index2.html
+
+:qa! to get out of insert stage
+:wq! save changes
+
+git log -p
+	compare all the changes
+
+git command to remove the file from local repository and working directory
+	git rm index1.html
+
+single operation to be reverted
+	- git revert <commit id>
+	this cmd is used with commit id
+	
+git reset --hard <commitid>
+ - all the commits after this commit id will be deleted
+ and mentioned commit will be the latest commit
+ 
+ git --mixed <commit id>
+ to bring back all the changes to working directory
+ 
+ --hard 
+ --soft WD(changes in)
+ --soft SA(changes in)
+ 
+creating and merging of branches
+git ls--tree <branchname>
+	list al the files in particular branches
+
+git ls--files <dirname>
+	list all the files in particular directory
+
+git branch
+	lists all the branches in the repository
+
+git branch <branch name>
+	creates a branch
+	
+git branch -D <branch name>
+	deletes branch
+	
+	git rm dir/\*.txt
+	deletes all the txt file in the dir and its sub directory
+	
+git rebase master
+
+can we check what changes were made in particular commit?
+
+
+3515f53 (HEAD -> feature, master) done on f2 branch
+8c5fcea added on f1 branch
+fdb07d3 added file index.html
+
+f3c0340 (HEAD -> feature) new file2 on feature
+3d64ec8 done on feature
+3515f53 (master) done on f2 branch
+8c5fcea added on f1 branch
+fdb07d3 added file index.html
+
+
+new commit on master
+1a60716 (HEAD -> master) done on master
+3515f53 done on f2 branch
+8c5fcea added on f1 branch
+fdb07d3 added file index.html
+
+
+personal access token
+new token
+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
+
+
+git remote add origin https://github.com/rmkhan117/myproject20Aug_rizwan.git
+
+git remote -v
+
+git push origin master
+
+
+public key
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4ejcoYXgP90pdCB7R67yA5iOT71JkNcmzNQgshXrJOoUO7TzMen01sTwvi74Ov0XtNsJvkEZyREusIR6/HWCWK3cusc3poVdcqaMzi/agrr7v+eXlFM/Ammc7QYfCmd8lynt5Hh1qUi0notJElXIuBsWF6dH2ESqXUHR8TBC0YtT9SC3NyQn0YJdHU+WXHFGSFugOyu40w/qO79JnP2ucwFF/eeGzy4+BSDjnijzGfbUjnxUQCb9kfFBduxrOeVNH89lKpUjvt9m37fmWa3L9US1n4vcDxCei35O+vIVm8RAU4TCoGn/MS4TE4P6HnxHeSOo5ZSeVTPNp/nOwBXxp root@ip-172-31-32-199.us-east-2.compute.internal
+
+pulling the file from github to git
+ - pull = fetch + Merge
+ git pull origin master
+
+Fetch the files from github to git
+ - gets the changes but does not merge them
+ git fetch origin master
+ 
+ cd .git -> cat FETCH_HEAD -> git diff <id> e.g 3f49982114a9684ce08ea7bdf25dc4e895ee346c
+ 
+ cd ..
+ 
+ git checkout origin/master <filename> e.g Marc-file
+ 
+ git status -> git commit
+
+Forking in github
+
+	will copy parent repo into your github account
+
+cloning the github repo to git
+	creates working directory/local repository
+
+pull request in github
+
+.gitignore, stashing & gitflow tool
+
+tagging in git
+
+fork
+
+
+
+display full diff od=f each commit
+git log -p 
+
+.gitignore
+
+Tagging in git
+git flow
+git lab
+git orgs and team. collaboration
+git is integrated with 
+
+lightwieght tag
+git tag <tagname>
+	gets appended to latest commit
+
+Annotated tag (-a)
+	git tag -a <tagname> -m "<message>" <sommit id>
+	can attach tag to specific commit id
+	
+	
+	git show <tagname>
+	
+push tag from local to remote repository
+git remote -v
+
+delete tag
+git tag -d <tagname>
+
+
+git flow init
+
+git flow release start 0.2.0 
+
+		[root@ip-172-31-32-199 gitflowdemo]# git flow hotfix start bug123
+		Switched to a new branch 'hotfix/bug123'
+
+		Summary of actions:
+		- A new branch 'hotfix/bug123' was created, based on 'master'
+		- You are now on branch 'hotfix/bug123'
+
+		Follow-up actions:
+		- Bump the version number now!
+		- Start committing your hot fixes
+		- When done, run:
+
+			 git flow hotfix finish 'bug123'
+
+
+gitlab Tokens:
+	access token:
+	glpat-criWwW5QdJBSoNch98SJ
+	
+	Feed token:
+	glft-1HLSCpVwJTzY23zozwKd
+	
+	Incomming email token:
+	glimt-8arn3o1e5gre1xqlg2fduopn9
+	
+	
+create pub key:
+	ssh keygen
+	
+public Key:
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC23M9EjAdzMETFLArg+wkRnYakMz4h5Lk+/A65OQlIzYkhIgxrFJrOwkVyYzNB60iw2DUq/frpJ8w/sZOY8o7FfOxrlvTEUxE4g/LgeICmw6OY7nAM4tiMPJQRF/tCPpiWfCxyuDW8MCY6RyRmNwIjoXZEkq5XFYfvWcVuBGLXdzPBhkg032lBCkGV1y/0tICSGthjJ0UL00C/qO3rfS86TQgND5/apGlctNRVx3VsY02s/2MxACr7+QbTgE699Gr++nJzFc93ADgEWZ95pj1TqTztSyi9EnlkBKG5BwSJFH91q3w0c7sP0eHdaKxXF1I/7P6cFnMypoutxIsmkAOP root@ip-172-31-32-199.us-east-2.compute.internal
+
+see pub key:
+	cat  /root/.ssh/id_rsa.pub
+	
+try this:
+	git remote add all origin <clone link>
+	
+create organisation in github
+
+
+PAT for eclipse
+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
+
+
+

@@ -1,0 +1,224 @@
+Jenkins Set up:
+==================================================
+
+Create an ec2 Instance or use the same instance used in GIT sessions.
+
+If git is not present:
+
+Git installation:
+
+yum install git -y
+
+Check the version of GIT
+
+…
+git --version
+…
+
+SEE THAT YOU ARE IN ROOT DIRECTORY
+# cd
+# pwd
+************************************
+
+JAVA Installation
+
+SEE THAT YOU ARE IN ROOT DIRECTORY
+
+…
+ sudo amazon-linux-extras install java-openjdk11 -y
+…
+
+IF Command to install java on CENTOS 8
+
+..
+sudo yum install java-11-openjdk-devel
+…
+
+Command to install java 11 on Ubuntu
+
+…
+apt-get update 
+apt-get install openjdk-8-jdk
+
+…
+Amazon linux 2023
+========================
+Install Java
+
+# sudo dnf update
+
+# sudo dnf install java-11-amazon-corretto -y
+
+=====================================
+
+Install Jenkins:
+===================================
+
+On the browser open https://www.jenkins.io/
+
+Go to downloads section
+
+Select centos OS
+
+Go to Ec2 machine and execute commands:
+
+# sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+# sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+# yum install jenkins -y
+
+
+Execute command to start jenkins server:
+
+systemctl start jenkins
+
+
+systemctl status jenkins
+
+Installation is complete on the server
+
+Home Directory of jenkins: /var/lib/jenkins
+
+Directory where Jenkins store its configuration and working:
+# cat /etc/sysconfig/jenkins
+
+
+==============================
+
+We need to now  set up jenkins dashboard
+=======================================
+
+For this, take public ip address of ec2 server, copy it and go to your browser and give
+
+publicipaddress:8080
+
+On the ec2 server, execute below command
+
+$ cat /var/lib/jenkins/secrets/initialAdminPassword
+
+Copy the password and paste in the browser (jenkins)
+
+Click on continue
+
+Click on Jenkins suggested plugin tab(on left side)
+
+On the next page
+
+Username: admin
+Password : admin
+Retype password: admin
+Email: admin@gmail.com
+
+Click on continue
+
+Click on finish
+
+You will be on the jenkins dashboard
+
+****************************************************
+Create a Jenkisn job that will execute linux commands.
+
+Create a new job in jenkins
+Click on + sign to create new item/job/project
+Give a name to the job : Job1
+Select freestyle project and click on OK button
+Go to build Steps→ select Execute Shell→ give commands like
+touch file1
+echo “hello Jenkins!”
+
+Save the job → click on build Now button.
+
+See the console output and check the workspace directory.
+===========================================
+
+ Create a Jenkisn job that will clone a github repository in jenkins workspace
+
+Create a new job in jenkins
+Click on + sign to create new item/job/project
+Give a name to the job : CloneRepo
+Select freestyle project and click on OK button
+On the project click on Source code management
+Select git option
+Give git hub repo path
+https://github.com/Sonal0409/myproject05Aug
+
+Branch name as ===>  Master
+
+Save the job
+
+Click on Build now
+
+Repository will be cloned in jenkins workspace
+
+You can go to job → workspace folder to see the files
+
+****************
+
+jenkins token:
+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
+
+
+Pipelines:
+
+pipeline{
+    agent any
+    
+    parameters{
+        string(name: "branch", defaultValue: "test", description: "Enter the branch name")
+    }
+    
+    stages{
+        stage('Build on Dev'){
+            steps{
+                // ifwe have to give conditions. we use a section called as script
+                script{
+                    if(params.branch == "dev"){
+                        echo "Do dev Activities"
+                    }
+                }
+            }
+        }
+        stage('Build on Test'){
+            steps{
+                script{
+                    if(params.branch == "test"){
+                        echo "Do test Activities"
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+https://github.com/Sonal0409/DevOpsCodeDemo.git
+https://github.com/Sonal0409/purdue-jenkinsfileDemo
+
+ssh -i "29july.pem" ec2-user@ec2-18-218-176-2.us-east-2.compute.amazonaws.com
+
+/var/lib/jenkins/workspace/CICDPipeline/target/addressbook.war
+
+/opt/tomcat/webapps
+
+sshagent(['tomtomcatsshcredentials']) {
+    // some block
+}
+
+SSH command to copy file from server1 to tomcat server2
+
+# scp <filelocation><username of tomcat>@<public ip tomcat server>:<destinationpath>
+
+sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/CICDPipeline/target/addressbook.war ec2-user@18.218.176.2:/opt/tomcat/webapps'
+
+
+
+
+https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.80/bin/apache-tomcat-9.0.80.tar.gz
+
+
+rename server
+	- hostname <newname>
+
+rename folder
+	- mv <oldname> <newname>
