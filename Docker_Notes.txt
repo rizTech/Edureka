@@ -91,3 +91,19 @@ Delete only images and not its containers
 
 Detached Mode (-d)
 ==================
+
+
+
+
+
+I have a github repository where my ecomm application code is present
+http://github.com/Sonal10409/ecomm.git
+You have to deploy/place this code on a container, without creating a custom image
+
+Answer:
+- First we will clone the repo files from remote to local
+- It will create a folder with name ecomm
+- Files are now present in on my host machine path -> /root/ecomm
+- So for this we will now we use volume concept to copy the files from /root/ecomm to container directory
+	- because the image is httpd(apache) the container directory is going to be /usr/local/apache2/htdocs/
+the command to deploy 
